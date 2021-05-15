@@ -1,0 +1,11 @@
+p {
+    font-family: Lato;
+  }
+  
+  input.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+
+.submitButton{
+  margin-top: 20px;
+}
