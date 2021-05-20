@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { NavHeaderRoutingModule } from './nav-header-routing.module';
+import { NavHeaderComponent } from './nav-header.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [NavHeaderComponent],
   imports: [
     CommonModule,
-    NavHeaderRoutingModule
-  ]
+    FormsModule
+  ],
+  exports:[NavHeaderComponent]
 })
 export class NavHeaderModule { }

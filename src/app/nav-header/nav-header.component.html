@@ -6,7 +6,7 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><span class="nav-link px-2 text-success"  *ngIf="userSearch.loggedIn()">{{userSearch.userCredentia}}</span></li>
+          <li><span class="nav-link px-2 text-success"  *ngIf="userSearch.loggedIn()">{{userSearch.userName}}</span></li>
           
         </ul>
 
@@ -17,7 +17,7 @@
           
         </ul>
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark"  *ngIf="userSearch.loggedIn()"  placeholder="Search..." aria-label="Search" [(ngModel)]="searchtext" [ngModelOptions]="{standalone: true}">
+          <input type="search" class="form-control form-control-dark"  *ngIf="userSearch.loggedIn()"  placeholder="Search..." aria-label="Search" [(ngModel)]="searchtext" [ngModelOptions]="{standalone: true}" (ngModelChange)="getAllUsers()">
           <button type="button" class="btn btn-outline-light me-2"  *ngIf="userSearch.loggedIn()" (click)="searching()">search</button>
           
         </form>

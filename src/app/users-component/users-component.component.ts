@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserServiceService } from '../services/user-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users-component',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(public userService:UserServiceService,public router:Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.userService.diffUser()
+  }
+
+  getUserId(id:number){
+    console.log(id)
+    this.userService.userId=id
+    this.router.navigate([`view/${id}/details`])
   }
 
 }

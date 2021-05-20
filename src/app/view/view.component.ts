@@ -7,11 +7,11 @@ import {UserServiceService} from "../services/user-service.service";
 })
 export class ViewComponent implements OnInit {
 
-  constructor(public posts:UserServiceService) { }
+  constructor(public userService:UserServiceService) { }
 
   ngOnInit(): void {
-    this.posts.getPost().subscribe(response=>{
-      this.posts.userPosts=response
+    this.userService.getPost().subscribe(response=>{
+      this.userService.userPosts=response
     })
   }
 

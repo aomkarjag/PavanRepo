@@ -5,9 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {LoginComponentModule} from './login-component/login-component.module'
 import { HttpClientModule } from '@angular/common/http';
+import { NavHeaderModule } from './nav-header/nav-header.module';
 @NgModule({
   declarations: [
-    AppComponent 
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
